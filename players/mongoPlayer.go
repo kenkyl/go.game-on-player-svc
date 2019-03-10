@@ -1,16 +1,20 @@
 package players
 
-/*	An implementation of the Player interface that interacts with an
+/**
+ *	An implementation of the Player interface that interacts with an
  *	instance of MongoDB
  */
 type MongoPlayer struct {
-	playerID  int
+	playerID  string
 	firstName string
 	lastName  string
 	nickname  string
 	//totalRecord TotalRecord
 }
 
+/**
+ *	Factory method to construct new MongoPlayer objects
+ */
 func NewPlayer() *MongoPlayer {
 	mongoPlayer := new(MongoPlayer)
 	//mongoPlayer.playerID = generateID()
